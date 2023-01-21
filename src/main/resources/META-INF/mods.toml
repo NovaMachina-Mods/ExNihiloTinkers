@@ -1,0 +1,29 @@
+modLoader = "javafml" #mandatory
+loaderVersion = "${loader_version}" #mandatory
+license = "Creative Commons"
+issueTrackerURL = "${git_url}/issues" #optional
+[[mods]] #mandatory
+modId = "exnihilotinkers" #mandatory
+version = "${version}" #mandatory
+displayName = "Ex Nihilo: Sequentia - Tinkers Addon" #mandatory
+displayURL = "${curseforge_url}" #optional
+logoFile = "logo.png" #optional
+credits = "" #optional
+authors = "NovaMachina" #optional
+# The description text for the mod (multi line!) (#mandatory)
+description = '''
+    An addon for Ex Nihilo: Sequentia that adds support for Tinkers Construct.
+    '''
+[[dependencies.exnihilotinkers]]
+modId = "exnihilosequentia"
+mandatory = true
+versionRange = "${ex_nihilo_version}"
+ordering = "AFTER"
+side = "BOTH"
+[[dependencies.exnihilotinkers]]
+modId = "tconstruct"
+mandatory = true
+versionRange = "${tinkers_version}"
+ordering = "AFTER"
+side = "BOTH"
+
